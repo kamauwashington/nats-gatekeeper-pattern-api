@@ -1,0 +1,4 @@
+{
+    "ip-geo" : "./src/schemas/ip.schema.json",
+    "reverse-geo" : "./src/schemas/coordinates.schema.json"
+}

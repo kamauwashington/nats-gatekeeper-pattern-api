@@ -1,0 +1,12 @@
+{
+    "title": "IP Address",
+    "type": "object",
+    "required": ["ip"],
+    "properties": {
+      "ip": {
+        "type": "string",
+        "pattern": "^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$"
+      }
+    },
+    "additionalProperties": false
+  }
