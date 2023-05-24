@@ -1,5 +1,5 @@
 {
-  "name": "nats-validation-proxy-api",
+  "name": "nats-validation-gatekeeper-api",
   "version": "1.0.0",
   "description": "NATS.io async validation Gateway Pattern w/ ExpressJS API",
   "scripts": {
