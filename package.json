@@ -1,7 +1,7 @@
 {
   "name": "nats-validation-proxy-api",
   "version": "1.0.0",
-  "description": "ExpressJS async validation proxy (Request <-> [Subject] <?-> Validation Subscriber <-?> [Subject] <-> Subscriber)",
+  "description": "NATS.io async validation Gateway Pattern w/ ExpressJS API",
   "scripts": {
     "ts-node": "ts-node",
     "api": "ts-node -r dotenv/config --esm ./src/api.ts",
