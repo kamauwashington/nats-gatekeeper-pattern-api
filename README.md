@@ -6,13 +6,6 @@ or starting point for a production level implementation.
 
 This project illustrates the use of [Nats.io](https://nats.io/) to implement JSON schema validation using the [Gatekeeper Pattern](https://dzone.com/articles/cloud-design-patterns-part-2-the-gatekeeper-securi) via built in [Request/Reply streaming pattern](https://docs.nats.io/nats-concepts/core-nats/reqreply) within an [ExpressJS]() API. The goal behind this implementation is to showcase a loosely coupled Gatekeeper Pattern, wherein the execution of an API request is first evaluated by a validation subscriber (the **Gatekeeper**) prior to forwarding on to its intended subscriber
 
-This pattern is useful in many ways, but there are a few freebies from this implementation :
-* Validation compute is offloaded from worker/solution compute, and can scale independently
-* Any programming language can use Nats.io API to initiate Request/Response directly with Nats.io bypassing HTTP entirely
-* The API can be written in NodeJS|Go|Python|Java|.NET Core C#, and the Subscriber can be written in NodeJS|Go|Python|Java|.NET Core C#
-* The subscriber can be swapped out and or A|B tested
-* The Nats Subject can be subscribed to by (n) additional subscribers, for activities like logging, direct push to a DataLake, and so on.
-
 > What will be seen in this example are json requests sent to dynamic ExpressJS endpoints, the messages validated / invalidated before published to the next subject in the chain (if validated). The reply from two subscriptions in succession (gatekeeper and worker) will asynchronously reply to the REST API callee if validated,or the validation subscription will return validation errors to the REST API callee.
 
 ## Prerequisites
