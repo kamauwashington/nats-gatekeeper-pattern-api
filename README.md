@@ -28,7 +28,7 @@ Before you continue, ensure you have met the following requirements:
 
 ## Environment Variables
 
-This repository uses dotenv, feel free to create a .env file to set the ALPHA_VANTAGE_KEY, or override other aspects of the program.
+This repository uses dotenv, feel free to create a .env to override other aspects of the program.
 
 * TOMTOM_API_KEY : The API Key provided by TomTom (defaults to **no-key**)
 * HOST : The host the express server should run on (defaults to **localhost**)
